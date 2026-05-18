@@ -1,0 +1,16 @@
+PROMPT=$(cat prompt.txt | jq -Rs .)
+
+curl -s https://api.groq.com/openai/v1/chat/completions \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer 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" \
+-d "{
+  \"model\":\"openai/gpt-oss-120b\",
+  \"max_tokens\":4000,
+  \"temperature\":0.3,
+  \"messages\":[
+    {
+      \"role\":\"user\",
+      \"content\":$PROMPT
+    }
+  ]
+}" | jq -r '.choices[0].message.content'
