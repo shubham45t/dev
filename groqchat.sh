@@ -2,7 +2,7 @@
 
 MODEL="openai/gpt-oss-120b"
 
-export GROQ_API_KEY="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"
+export GROQ_API_KEY="xai-NazTnYay9hIvFPjwlqyftWyIJsI7jgsfxwVepRoV0SU1kC3bFSQ4izGKbvF44ttjPUaA3lZzIxhJwEP3"
 
 history='[]'
 
